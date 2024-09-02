@@ -1,0 +1,85 @@
+/* Ensure the parent container is flex and handles the equal height */
+.events-news-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Spacing between cards */
+}
+
+/* Main card styles */
+.event-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0; /* Removed individual card margin for uniformity in spacing */
+  padding: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures all cards stretch evenly */
+}
+
+/* Image section with a fixed height */
+.event-card-image {
+  width: 100%;
+  height: 200px; /* Consistent image height */
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Flexbox for card content */
+.event-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Title with consistent height and alignment */
+.event-card-title {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #333;
+  min-height: 50px; /* Ensure titles have a similar space */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center-align text vertically */
+  text-align: center; /* Center-align text horizontally */
+}
+
+/* Description section with text truncation for consistency */
+.event-card-description {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+  min-height: 60px; /* Ensure descriptions have a consistent space */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center-align text vertically */
+  text-align: center; /* Center-align text horizontally */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis to overflow text */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Button styles remain consistent */
+.event-card-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #005a5e;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.event-card-button:hover {
+  background-color: #004851;
+}

@@ -1,0 +1,85 @@
+/* File: src/pages/articles/Article1.css */
+
+.article-page {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .article-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #005a5e;
+    text-align: center;
+  }
+  
+  .article-page p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .article-page em {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #777;
+  }
+  
+  .article-page img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  
+  .article-page .event-program {
+    border-top: 2px solid #005a5e;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  
+  .article-page .event-program h2 {
+    font-size: 2em;
+    color: #005a5e;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .article-page .event-program ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+  }
+  
+  .article-page .event-program ul li {
+    margin-bottom: 10px;
+  }
+  
+  .article-page .footer {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #005a5e;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .article-page {
+      padding: 10px;
+    }
+  
+    .article-page h1 {
+      font-size: 2em;
+    }
+  
+    .article-page p {
+      font-size: 1em;
+    }
+  }
+  

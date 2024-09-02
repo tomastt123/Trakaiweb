@@ -1,0 +1,58 @@
+.About {
+    display: flex;
+    justify-content: space-between; /* Align items with space between */
+    padding: 20px;
+  }
+  
+  .aboutText {
+    width: 50%; /* Take 50% of the container */
+  }
+  
+  .aboutContent {
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  .aboutPhotos {
+    width: 50%; /* Take 50% of the container */
+    display: flex;
+    flex-direction: column; /* Stack photos vertically */
+  }
+  
+  .aboutTop {
+    height: 50vh; /* Adjust height as necessary */
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px; /* Add space between the photos */
+  }
+  
+  .aboutContent h1 {
+    margin-top: 0;
+  }
+  
+  .aboutContent p {
+    margin-top: 10px; /* Adjust spacing between paragraphs */
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .About {
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: center;
+    }
+  
+    .aboutText,
+    .aboutPhotos {
+      width: 100%; /* Take full width on small screens */
+    }
+  
+    .aboutPhotos {
+      display: flex;
+      flex-direction: row; /* Stack photos horizontally on small screens */
+      justify-content: space-around; /* Add space around photos */
+    }
+  
+    .aboutTop {
+      height: 30vh; /* Adjust height for smaller screens */
+    }
+  }
+  
