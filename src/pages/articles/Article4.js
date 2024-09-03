@@ -4,7 +4,7 @@ import Article4photo from '../../assets/Article4photo.jpg';
 import './Article1.css';
 
 
-const Article1 = () => {
+const Article4 = () => {
   return (
     <div className="article-page">
       <h1>TRAKŲ ISTORIJOS MUZIEJAUS INFORMACIJA LANKYTOJAMS!</h1>
@@ -27,4 +27,4 @@ Dėl visų, su tvarkybos projektu susijusių darbų eigos pokyčių Muziejus inf
   );
 };
 
-export default Article1;
+export default Article4;

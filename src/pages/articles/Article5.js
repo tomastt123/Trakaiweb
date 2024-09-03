@@ -4,7 +4,7 @@ import Article5photo from '../../assets/Article5photo.jpg';
 import './Article1.css';
 
 
-const Article1 = () => {
+const Article5 = () => {
   return (
     <div className="article-page">
       <h1>TRAKŲ APYLINKIŲ TAUTOSAKA „Trakai ežerų atspindžiuose: legendos, padavimai, sakmės“</h1>
@@ -29,4 +29,4 @@ Partneriai: Lietuvių literatūros ir tautosakos institutas, Trakų rajono saviv
   );
 };
 
-export default Article1;
+export default Article5;

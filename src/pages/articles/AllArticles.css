@@ -1,0 +1,101 @@
+/* Container for event cards */
+.events-news-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch; /* Aligns all cards to the same height */
+  }
+  
+  /* Event card styles */
+  .event-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 410px; /* Uniform height for all cards */
+  }
+  
+  /* Container specifically for the image */
+  .event-card-image-container {
+    width: 100px;
+    height: 100px; /* Fixed height for the image area */
+    overflow: hidden; /* Ensures no overflow issues */
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+  }
+  
+  /* Image styling */
+  .event-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures images cover the area proportionately */
+    object-position: 0% 5px;
+  }
+  
+  /* Content section inside the card */
+  .event-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Title section */
+  .event-card-title {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #333;
+    height: 50px; /* Uniform height for titles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Description section */
+  .event-card-description {
+    font-size: 0.95em;
+    color: #555;
+    margin: 5px 0;
+    height: 60px; /* Fixed height for descriptions */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Button at the bottom */
+  .event-card-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #005a5e;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    flex-shrink: 0;
+    height: 40px; /* Fixed button height */
+    margin-top: 20px;
+  }
+  
+  .event-card-button:hover {
+    background-color: #004851;
+  }
+  

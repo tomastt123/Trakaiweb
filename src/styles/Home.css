@@ -153,3 +153,24 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+
+    .all-articles-button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .all-articles-button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #005a5e;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    
+    .all-articles-button:hover {
+      background-color: #004851;
+    }

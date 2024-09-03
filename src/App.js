@@ -9,6 +9,9 @@ import Contact from './pages/Contact';
 import Article1 from './pages/articles/Article1'; // Import your article components
 import Article2 from './pages/articles/Article2'; // Example for additional articles
 import Article3 from './pages/articles/Article3';
+import Article4 from './pages/articles/Article4';
+import Article5 from './pages/articles/Article5';
+import AllArticles from './pages/articles/AllArticles';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -25,6 +28,9 @@ function App() {
         <Route path='/article/1' element={<Article1 />} />
         <Route path='/article/2' element={<Article2 />} />
         <Route path='/article/3' element={<Article3 />} />
+        <Route path='/article/4' element={<Article4 />} />
+        <Route path='/article/5' element={<Article5 />} />
+        <Route path='allarticles' element={<AllArticles />} />
       </Routes>
    <Footer />
    </Router>

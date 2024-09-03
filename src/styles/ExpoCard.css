@@ -1,13 +1,13 @@
-/* Container for event cards */
-.events-news-cards {
+/* Container for expo cards */
+.expo-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   align-items: stretch; /* Aligns all cards to the same height */
 }
 
-/* Event card styles */
-.event-card {
+/* Expo card styles */
+.expo-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
@@ -22,7 +22,7 @@
 }
 
 /* Container specifically for the image */
-.event-card-image-container {
+.expo-card-image-container {
   width: 100px;
   height: 100px; /* Fixed height for the image area */
   overflow: hidden; /* Ensures no overflow issues */
@@ -32,7 +32,7 @@
 }
 
 /* Image styling */
-.event-card-image {
+.expo-card-image {
   width: 100%;
   height: 200px;
   object-fit: cover; /* Ensures images cover the area proportionately */
@@ -40,7 +40,7 @@
 }
 
 /* Content section inside the card */
-.event-card-content {
+.expo-card-content {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@
 }
 
 /* Title section */
-.event-card-title {
+.expo-card-title {
   font-size: 1.2em;
   margin: 5px 0;
   color: #333;
@@ -63,7 +63,7 @@
 }
 
 /* Description section */
-.event-card-description {
+.expo-card-description {
   font-size: 0.95em;
   color: #555;
   margin: 5px 0;
@@ -78,7 +78,7 @@
 }
 
 /* Button at the bottom */
-.event-card-button {
+.expo-card-button {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
@@ -95,6 +95,6 @@
   margin-top: 20px;
 }
 
-.event-card-button:hover {
+.expo-card-button:hover {
   background-color: #004851;
 }

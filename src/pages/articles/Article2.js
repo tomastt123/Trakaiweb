@@ -4,7 +4,7 @@ import Article2photo from '../../assets/Article2photo.jpg';
 import './Article1.css';
 
 
-const Article1 = () => {
+const Article2 = () => {
   return (
     <div className="article-page">
       <h1>Kūrybinių dirbtuvių projektas „LDK rankraštinė knyga: Trakų pilies teismo knygų įrišai šiuolaikiškai“</h1>
@@ -35,4 +35,4 @@ Projekto partneris: Vilniaus knygrišių gildija
   );
 };
 
-export default Article1;
+export default Article2;
