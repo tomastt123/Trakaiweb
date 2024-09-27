@@ -1,12 +1,12 @@
-/* Container for expo cards */
-.expo-cards {
+/* Container for event cards */
+.expo-news-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   align-items: stretch; /* Aligns all cards to the same height */
 }
 
-/* Expo card styles */
+/* Event card styles */
 .expo-card {
   border: 1px solid #ddd;
   border-radius: 8px;

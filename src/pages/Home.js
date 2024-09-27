@@ -18,6 +18,9 @@ import Expo2photo from '../assets/Expo2photo.jpg';
 import Expo3photo from '../assets/Expo3photo.jpg';
 import Expo4photo from '../assets/Expo4photo.jpg';
 import Expo5photo from '../assets/Expo5photo.jpg';
+import CastleExpo from '../components/CastleExpo';
+
+
 
 function Home() {
   const truncateText = (text, limit) => {
@@ -33,11 +36,26 @@ function Home() {
   ];
 
   const expoNews = [
-    { id: 'expo1', title: 'Expo Title 1', description: 'Description for Expo 1', link: '/expo/1', imageSrc: Expo1photo },
-    { id: 'expo2', title: 'Expo Title 2', description: 'Description for Expo 2', link: '/expo/2', imageSrc: Expo2photo },
-    { id: 'expo3', title: 'Expo Title 3', description: 'Description for Expo 3', link: '/expo/3', imageSrc: Expo3photo },
-    { id: 'expo4', title: 'Expo Title 4', description: 'Description for Expo 4', link: '/expo/4', imageSrc: Expo4photo },
-    { id: 'expo5', title: 'Expo Title 5', description: 'Description for Expo 5', link: '/expo/5', imageSrc: Expo5photo },
+    { id: 'expo1', title: 'Trakų Pusiasalio pilies istorija', description: 'Viduramžiais pilys buvo raktas į valdžią. Karaliai, kunigaikščiai, didikai statė pilis tam, kad a', link: '/expo/1', imageSrc: Expo1photo },
+    { id: 'expo2', title: 'SKAIČIAVĘ BŪTĄJĮ LAIKĄ', description: 'Kišeninių laikrodžių istorija prasideda XVI a., kuomet buvo sukurti pirmieji nešiojami laiko matavimo prietaisai. ', link: '/expo/2', imageSrc: Expo2photo },
+    { id: 'expo3', title: 'PRIEŠ IR PO.', description: 'Trakų Salos pilis pradėta statyti XIV a. antrojoje pusėje Galvės ežere, iš kelių salų suformavus vieną didesnę', link: '/expo/3', imageSrc: Expo3photo },
+    { id: 'expo4', title: 'Senieji Trakai - Tikroji sostinė', description: '„Ir vieną kartą didysis kunigaikštis Gediminas išjojo iš savo sostinės Kernavės medžioti už penkių mylių,', link: '/expo/4', imageSrc: Expo4photo },
+    { id: 'expo5', title: 'Virginijaus Stančiko paroda „Angelai“', description: 'Angele Sarge, mano mielasis, saugok mane, Tu man paskirtasis. Vakarą, rytą, naktį ir dieną, saugok Tu mano žingsnį kiekvieną…', link: '/expo/5', imageSrc: Expo5photo },
+  ];
+
+  const expos = [
+    {
+      title: 'Salos pilies Ekspozicija',
+      description: 'Trakų Salos pilies centrinėse rūmuose nuo 1962 metų veikia Trakų istorijos muziejaus ekspozicija...',
+      photos: [Expo1Image1, Expo1Image2, Expo1Image3, Expo1Image4],
+      link: '#'
+    },
+    {
+      title: 'Pilies gynybinė struktūra',
+      description: 'Pilies gynybinės struktūros eksponatai ir istoriniai reliktai, atspindintys viduramžių kovas...',
+      photos: [Expo1Image1, Expo1Image2, Expo1Image3, Expo1Image4], // Add actual images for this expo
+      link: '#'
+    },
   ];
   
   return (
@@ -70,7 +88,7 @@ function Home() {
         </div>
       </div>
       <div className="thirdcontainer">
-        <h2>Events and News</h2>
+        <h2 className='expo-title'>Events and News</h2>
         <div className="events-news-cards">
           {eventsNews.map((item) => (
             <EventCard
@@ -89,20 +107,43 @@ function Home() {
         </div>
       </div>
       <div className="fourthcontainer">
-        <h3>Expositions</h3>
-        <div className="expo-cards">
-          {expoNews.map((item) => ( // Corrected to use expoNews
+      <h3 className="expo-title">Expositions</h3>
+        <div className="expo-news-cards">
+          {expoNews.map((item) => (
             <ExpoCard
               key={item.id}
               link={item.link}
               title={item.title}
-              description={truncateText(item.description, 80)} // Set character limit for description
+              description={truncateText(item.description, 80)}
               imageSrc={item.imageSrc}
             />
           ))}
         </div>
       </div>
+
+      <div className="fifthcontainer">
+        <div className="castle-grid">
+          {/* Left side with the image grid */}
+          <div className="castle-photos">
+            <img src={FifthPhoto1} alt="Exposition 1" />
+            <img src={FifthPhoto2} alt="Exposition 2" />
+            <img src={FifthPhoto3} alt="Exposition 3" />
+            <img src={FifthPhoto4} alt="Exposition 4" />
+          </div>
+          {/* Right side with the text block */}
+          <div className="castle-text">
+            <h2>Salos pilies Ekspozicija</h2>
+            <p>
+              Trakų Salos pilies centrinėse rūmuose nuo 1962 metų veikia Trakų istorijos muziejaus ekspozicija, kurioje atsispindi Trakų miesto, pilių ir Trakų žemės istorija. 
+              Trakų Salos pilies vakariniuose kazematuose nuo 1992 metų veikia 16 ekspozicijos salių, kuriose eksponuojami muziejaus taikomosios dailės rinkiniai: baldai, pypkės, 
+              spaudai, laikrodžiai, porceliano bei stiklo dirbiniai, medžioklės trofėjai.
+              Dominikonų koplyčioje 2005 metais gegužę buvo atidaryta sakralinio meno ekspozicija.
+            </p>
+            <a href="#">Plačiau →</a>
+          </div>
+        </div>
     </div>
+  </div>
   );
 }
 

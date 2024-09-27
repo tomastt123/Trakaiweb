@@ -1,0 +1,81 @@
+/* File: src/styles/CastleExpos.css */
+
+.fifthcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+  }
+  
+  .castle-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .castle-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .castle-photos img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .castle-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .castle-text h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .castle-text p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  .castle-text a {
+    font-size: 16px;
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  .castle-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Navigation buttons */
+  .expo-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin-top: 20px;
+  }
+  
+  .prev-expo, .next-expo {
+    background-color: #2980b9;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .prev-expo:hover, .next-expo:hover {
+    background-color: #1a5276;
+  }
+  
