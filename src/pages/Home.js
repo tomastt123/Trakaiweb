@@ -1,5 +1,4 @@
-// File: src/pages/Home.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import BannerImage from '../assets/trakaicastle2.jpg';
 import PriceIcon from '../assets/price.svg';
@@ -18,11 +17,21 @@ import Expo2photo from '../assets/Expo2photo.jpg';
 import Expo3photo from '../assets/Expo3photo.jpg';
 import Expo4photo from '../assets/Expo4photo.jpg';
 import Expo5photo from '../assets/Expo5photo.jpg';
-import CastleExpo from '../components/CastleExpo';
-
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 
 function Home() {
+
+  const [date, setDate] = useState(new Date());
+  const [activity, setActivity] = useState('Trakai Castle tour');  // New state for selected activity
+
+  const handleBookingSubmit = (e) => {
+    e.preventDefault();
+    // Handle booking form submission logic here
+    console.log('Booking submitted');
+  };
+
   const truncateText = (text, limit) => {
     return text.length > limit ? text.substring(0, limit) + '...' : text;
   };
@@ -41,21 +50,6 @@ function Home() {
     { id: 'expo3', title: 'PRIEŠ IR PO.', description: 'Trakų Salos pilis pradėta statyti XIV a. antrojoje pusėje Galvės ežere, iš kelių salų suformavus vieną didesnę', link: '/expo/3', imageSrc: Expo3photo },
     { id: 'expo4', title: 'Senieji Trakai - Tikroji sostinė', description: '„Ir vieną kartą didysis kunigaikštis Gediminas išjojo iš savo sostinės Kernavės medžioti už penkių mylių,', link: '/expo/4', imageSrc: Expo4photo },
     { id: 'expo5', title: 'Virginijaus Stančiko paroda „Angelai“', description: 'Angele Sarge, mano mielasis, saugok mane, Tu man paskirtasis. Vakarą, rytą, naktį ir dieną, saugok Tu mano žingsnį kiekvieną…', link: '/expo/5', imageSrc: Expo5photo },
-  ];
-
-  const expos = [
-    {
-      title: 'Salos pilies Ekspozicija',
-      description: 'Trakų Salos pilies centrinėse rūmuose nuo 1962 metų veikia Trakų istorijos muziejaus ekspozicija...',
-      photos: [Expo1Image1, Expo1Image2, Expo1Image3, Expo1Image4],
-      link: '#'
-    },
-    {
-      title: 'Pilies gynybinė struktūra',
-      description: 'Pilies gynybinės struktūros eksponatai ir istoriniai reliktai, atspindintys viduramžių kovas...',
-      photos: [Expo1Image1, Expo1Image2, Expo1Image3, Expo1Image4], // Add actual images for this expo
-      link: '#'
-    },
   ];
   
   return (
@@ -120,28 +114,52 @@ function Home() {
           ))}
         </div>
       </div>
-
-      <div className="fifthcontainer">
-        <div className="castle-grid">
-          {/* Left side with the image grid */}
-          <div className="castle-photos">
-            <img src={FifthPhoto1} alt="Exposition 1" />
-            <img src={FifthPhoto2} alt="Exposition 2" />
-            <img src={FifthPhoto3} alt="Exposition 3" />
-            <img src={FifthPhoto4} alt="Exposition 4" />
-          </div>
-          {/* Right side with the text block */}
-          <div className="castle-text">
-            <h2>Salos pilies Ekspozicija</h2>
-            <p>
-              Trakų Salos pilies centrinėse rūmuose nuo 1962 metų veikia Trakų istorijos muziejaus ekspozicija, kurioje atsispindi Trakų miesto, pilių ir Trakų žemės istorija. 
-              Trakų Salos pilies vakariniuose kazematuose nuo 1992 metų veikia 16 ekspozicijos salių, kuriose eksponuojami muziejaus taikomosios dailės rinkiniai: baldai, pypkės, 
-              spaudai, laikrodžiai, porceliano bei stiklo dirbiniai, medžioklės trofėjai.
-              Dominikonų koplyčioje 2005 metais gegužę buvo atidaryta sakralinio meno ekspozicija.
-            </p>
-            <a href="#">Plačiau →</a>
-          </div>
+    <div>
+      
+      <div className="booking-container">
+        <div className="calendar-section">
+          <h3>Select a Date</h3>
+          <Calendar onChange={setDate} value={date} className="custom-calendar" />
         </div>
+
+        <div className="booking-section">
+          <h3>Book Your Visit</h3>
+          <form onSubmit={handleBookingSubmit}>
+            <div>
+              <label htmlFor="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label htmlFor="visitors">Number of Visitors:</label>
+              <input type="number" id="visitors" name="visitors" required min="1" />
+            </div>
+            <div>
+              <label htmlFor="date">Selected Date:</label>
+              <input type="text" id="date" name="date" value={date.toDateString()} readOnly />
+            </div>
+            <div>
+              <label htmlFor="activity">Desired Activity:</label>
+              <select
+                id="activity"
+                name="activity"
+                value={activity}
+                onChange={(e) => setActivity(e.target.value)}  // Update activity on selection
+                required
+              >
+                <option value="Trakai Castle tour">Trakai Castle tour</option>
+                <option value="Trakai City tour">Trakai City tour</option>
+                <option value="Trakai Museum">Trakai Museum</option>
+                <option value="Around Trakai with a boat tour">Around Trakai with a boat tour</option>
+              </select>
+            </div>
+            <button type="submit">Book Now</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
   );

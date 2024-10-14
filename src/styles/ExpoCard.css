@@ -82,7 +82,7 @@
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  background-color: #005a5e;
+  background-color: #2980b9;
   color: #fff;
   cursor: pointer;
   text-align: center;
@@ -96,5 +96,5 @@
 }
 
 .expo-card-button:hover {
-  background-color: #004851;
+  background-color: #121619;
 }

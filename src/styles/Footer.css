@@ -1,21 +1,72 @@
 .footer {
-    width: 100%;
-    height: 200px;
-    background-color: #121619;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 10px;
-  }
-  
-  .socialMedia svg {
-    color: white;
-    margin: 20px;
-    font-size: 70px;
-    cursor: pointer;
-  }
-  
-  .footer p {
-    color: white;
-  }
+  width: 100%;
+  background-color: #121619;
+  display: flex;
+  justify-content: space-between; /* Ensure space between logo and columns */
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Keep it centered and responsive */
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer-logo {
+  width: 70px; /* Adjust logo size */
+  height: auto;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+}
+
+.footer-column {
+  margin-right: 20px;
+}
+
+.footer-column h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  color: white;
+  margin-bottom: 8px;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+}
+
+.socialMedia svg {
+  color: white;
+  margin: 0 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.footer p {
+  color: white;
+  margin-top: 20px;
+  font-size: 25px;
+}
