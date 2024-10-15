@@ -1,18 +1,6 @@
-// File: src/pages/Contact.js
-import React, { useState } from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';  // Import Google Maps components
+import React from 'react';
 import Trakupilisleft from '../assets/trakupilisleft.jpg';
 import '../styles/Contact.css';
-
-const containerStyle = {
-  width: '100%',
-  height: '300px',  // Set map height
-};
-
-const center = {
-  lat: 54.652600,  // Latitude of Trakai Castle
-  lng: 24.933200,  // Longitude of Trakai Castle
-};
 
 function Contact() {
   return (
@@ -20,18 +8,16 @@ function Contact() {
       <div className='leftSide' style={{ backgroundImage: `url(${Trakupilisleft})` }}></div>
 
       <div className='rightSide'>
-        {/* Google Maps Section */}
-        <div className="map-container">
-          <LoadScript googleMapsApiKey="AIzaSyD9hrjJcNAnKzfIpyEI1dV8_WGHchTFIf4"> {/* Replace with your API key */}
-            <GoogleMap
-              mapContainerStyle={containerStyle}
-              center={center}
-              zoom={14}
-            >
-              {/* Marker for Trakai Castle */}
-              <Marker position={center} />
-            </GoogleMap>
-          </LoadScript>
+        <div className="map-section">
+          <iframe
+            title="Trakai Castle Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2291.682264142723!2d24.926582916187657!3d54.65256998027868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e722a426600033%3A0x8693c8748f0fc84d!2sTrakai%20Island%20Castle!5e0!3m2!1sen!2slt!4v1637088412232!5m2!1sen!2slt"
+            width="100%"  // Adjusted width to make it responsive
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
         </div>
 
         <h1>Get in Touch</h1>
@@ -43,7 +29,7 @@ function Contact() {
           <input name="email" placeholder='Enter E-Mail address...' type='text' />
           <label htmlFor="message">Message:</label>
           <textarea rows="6" placeholder='Enter message..' name="message" required> </textarea>
-          <button type="submit"> Send Message </button>
+          <button type="submit">Send Message</button>
         </form>
       </div>
     </div>
