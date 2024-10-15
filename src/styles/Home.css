@@ -116,6 +116,7 @@
     width: 80px; /* Adjust size */
     height: 65px; /* Adjust size */
     margin-bottom: 15px; /* Space between image and text */
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
   }
 
 

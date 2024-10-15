@@ -12,6 +12,8 @@ import Article3 from './pages/articles/Article3';
 import Article4 from './pages/articles/Article4';
 import Article5 from './pages/articles/Article5';
 import AllArticles from './pages/articles/AllArticles';
+import GuidedTours from './pages/activities-page/GuidedTours';
+import Museum from './pages/activities-page/Museum';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -31,6 +33,8 @@ function App() {
         <Route path='/article/4' element={<Article4 />} />
         <Route path='/article/5' element={<Article5 />} />
         <Route path='allarticles' element={<AllArticles />} />
+        <Route path="/guided-tours" element={<GuidedTours />} />
+        <Route path="/museum" element={<Museum />} />
       </Routes>
    <Footer />
    </Router>

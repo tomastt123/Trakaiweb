@@ -2,7 +2,8 @@ import React from 'react';
 import { ActivitiesList } from '../helpers/ActivitiesList';
 import ActivitiesItem from '../components/ActivitiesItem';
 import '../styles/Activities.css';
-import { MenuItem } from '@mui/material';
+import { MenuItem } from '@mui/material'; /*for future use*/
+
 
 function Activities() {
   return (
@@ -15,6 +16,8 @@ function Activities() {
               key={key}
               image={activity.image}
               name={activity.name}
+              description={activity.description}
+              link={activity.link}  // Pass the link to the ActivitiesItem component
             />
           );
         })}
