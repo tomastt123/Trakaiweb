@@ -70,3 +70,20 @@
   margin-top: 20px;
   font-size: 25px;
 }
+
+.footer a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+}
+
+.footer a:visited {
+  color: inherit; /* Remove purple color for visited links */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Add hover effect (optional) */
+}
+
+.footer a:focus {
+  outline: none; /* Remove focus outline */
+}

@@ -18,7 +18,8 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  height: 410px; /* Uniform height for all cards */
+  height: 423px; /* Uniform height for all cards */
+  width: 500px;
 }
 
 /* Container specifically for the image */

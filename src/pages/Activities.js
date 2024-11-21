@@ -2,6 +2,7 @@ import React from 'react';
 import { ActivitiesList } from '../helpers/ActivitiesList';
 import ActivitiesItem from '../components/ActivitiesItem';
 import '../styles/Activities.css';
+import Background from '../assets/trakai-background.jpg';
 import { MenuItem } from '@mui/material'; /*for future use*/
 
 

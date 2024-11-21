@@ -1,4 +1,5 @@
 import './App.css';
+import ScrollToTop from './helpers/ScrollToTop';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from './pages/Home';
@@ -14,6 +15,10 @@ import Article5 from './pages/articles/Article5';
 import AllArticles from './pages/articles/AllArticles';
 import GuidedTours from './pages/activities-page/GuidedTours';
 import Museum from './pages/activities-page/Museum';
+import Eat from './pages/activities-page/eat';
+import Boat from './pages/activities-page/Boat';
+import Parks from './pages/activities-page/Parks';
+import Souvenirs from './pages/activities-page/Souvenirs';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -21,6 +26,7 @@ function App() {
   return (
     <div className="Trakai castle">
          <Router>
+          <ScrollToTop />
       <Navbar />
       <Routes>
         <Route exact path='/' element={<Home />} />
@@ -35,6 +41,10 @@ function App() {
         <Route path='allarticles' element={<AllArticles />} />
         <Route path="/guided-tours" element={<GuidedTours />} />
         <Route path="/museum" element={<Museum />} />
+        <Route path="/eat" element={<Eat />} />
+        <Route path="/boat" element={<Boat />} />
+        <Route path="/parks" element={<Parks />} />
+        <Route path="/souvenirs" element={<Souvenirs />} />
       </Routes>
    <Footer />
    </Router>

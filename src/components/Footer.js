@@ -25,10 +25,10 @@ function Footer() {
           <div className="footer-column">
             <h3>Tours</h3>
             <ul>
-              <li>Castle tour</li>
-              <li>City tour</li>
-              <li>Trakai museum</li>
-              <li>Boat tour</li>
+              <li><a href='/guided-tours'>Castle tour</a></li>
+              <li><a href='/parks'>Parks</a></li>
+              <li><a href='/museum'>Museums</a></li>
+              <li><a href='/boat'>Boat Tours</a></li>
             </ul>
           </div>
 

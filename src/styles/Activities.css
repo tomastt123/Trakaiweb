@@ -6,11 +6,31 @@
   align-items: center;
   flex-direction: column;
   padding-bottom: 40px;
+  position: relative; /* Allow positioning of pseudo-element */
+  min-height: 100vh; /* Ensure it takes at least the full height */
+  color: black; /* Adjust text color for visibility */
+}
+
+.Activities::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/trakai-background2.png'); /* Background image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-color: rgba(255, 255, 255);
+  opacity: 0.4; /* Set transparency */
+  z-index: 0; /* Make sure it is behind the content */
 }
 
 .ActivitiesTitle {
   font-family: cursive;
   font-size: 60px;
+  position: relative; /* Ensure this is above the background */
+  z-index: 1; /* Bring the title above the background */
 }
 
 .ActivitiesList {
@@ -19,6 +39,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
+  position: relative; /* Ensure this is above the background */
+  z-index: 1; /* Bring the activities list above the background */
 }
 
 /* MENU ITEM STYLING */
@@ -34,6 +56,8 @@
   background-color: #f9f9f9;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease; /* Add a hover effect */
+  z-index: 100;
+  color: black;
 }
 
 .activity-image {
@@ -67,8 +91,12 @@
   width: 220px;
 }
 
+.ActivitiesItem h1  {
+  font-size: 26px;
+}
+
 .ActivitiesItem p {
-  font-size: 17px;
+  font-size: 14px;
 }
 
 @media only screen and (max-width: 1300px) {

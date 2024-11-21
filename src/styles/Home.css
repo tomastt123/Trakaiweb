@@ -312,3 +312,13 @@
     .custom-calendar .react-calendar__tile {
       padding: 20px; /* Increase padding to make the calendar cells bigger */
     }
+
+    @media only screen and (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr; /* Stack elements */
+      }
+    
+      .booking-container {
+        flex-direction: column; /* Stack calendar and form */
+      }
+    }

@@ -22,20 +22,24 @@ export const ActivitiesList = [
     name: 'Eat and Drink',
     image: Food,
     description: 'Explore local Trakai food',
+    link: '/eat',
   },
   {
     name: 'Around Trakai',
     image: AroundTrakai,
     description: 'Explore Trakai with a boat or a yacht',
+    link: '/boat',
   },
   {
     name: 'Parks',
     image: Parks,
     description: 'See the beautiful scenery of Trakai parks',
+    link: '/parks',
   },
   {
     name: 'Souvenirs',
     image: Souvenirs,
     description: 'Treat yourself with a souvenir from Trakai',
+    link: '/souvenirs',
   }
 ];
